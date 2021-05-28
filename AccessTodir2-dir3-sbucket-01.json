@@ -1,0 +1,28 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "s3:PutObject",
+                "s3:PutBucketWebsite",
+                "s3:PutObjectRetention",
+                "s3:ListBucket",
+                "s3:PutObjectLegalHold",
+                "s3:PutBucketVersioning"
+            ],
+            "Resource": [
+                "arn:aws:s3:::sucket-01/dir2/*",
+                "arn:aws:s3:::sbucket-01/dir3/*",
+                "arn:aws:s3:::sbucket-01"
+            ]
+        },
+        {
+            "Sid": "VisualEditor1",
+            "Effect": "Allow",
+            "Action": "s3:ListAllMyBuckets",
+            "Resource": "*"
+        }
+    ]
+}
